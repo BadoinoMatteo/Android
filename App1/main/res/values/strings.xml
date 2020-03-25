@@ -1,0 +1,22 @@
+<resources>
+    <!-- MAIN ACTIVITY -->
+    <string name="app_name">App_4AROB</string>
+    <string name="titolo">Mia App</string>
+    <string name="saluta">Saluta</string>
+    <string name="alto_basso">Alto&amp;Basso</string>
+    <string name="accelerometro">Accelerometro</string>
+    <string name="fotocamera">Fotocamera</string>
+
+    <!-- ALTOBASSO ACTIVITY -->
+    <string name="title_activity_altobasso">Alto&amp;Basso</string>
+    <string name="dummy_button">Esci</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="inserisci_numero">Inserisci un numero</string>
+    <string name="esito_numero">Esito</string>
+    <!-- ACC ACTIVITY -->
+    <string name="titolo_acc">ACCELEROMETRO</string>
+    <string name="sens_x">X</string>
+    <string name="sens_y">Y</string>
+    <string name="sens_z">Z</string>
+
+</resources>

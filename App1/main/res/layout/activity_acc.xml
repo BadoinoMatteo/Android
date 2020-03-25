@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AccActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/txtTitolo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/titolo_acc"
+            android:textAlignment="center"
+            android:textSize="44sp"
+            android:background="@color/colorRosso"
+            android:textColor="@color/colorBianco"
+            />
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15sp"
+            />
+
+        <TextView
+            android:id="@+id/txtX"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/sens_x"
+            android:textSize="28sp"
+            android:padding="15sp"
+            android:background="@color/colorBlu"
+            android:textColor="@color/colorBianco"
+            />
+
+        <TextView
+            android:id="@+id/txtY"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/sens_y"
+            android:textSize="28sp"
+            android:padding="15sp"
+            android:background="@color/colorArancio"
+            android:textColor="@color/colorBianco"
+            />
+
+        <TextView
+            android:id="@+id/txtZ"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/sens_z"
+            android:textSize="28sp"
+            android:padding="15sp"
+            android:background="@color/colorVerde"
+            android:textColor="@color/colorBianco"
+            />
+        <Button
+            android:id="@+id/btnEsciAcc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/dummy_button"
+            android:textSize="45sp"
+            android:paddingTop="10sp"
+            android:background="@color/colorBianco"
+            android:textColor="@color/colorBlu"
+            />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
