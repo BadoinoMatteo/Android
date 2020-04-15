@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">prova2</string>
+    <string name="trattino">-</string>
+    <string name="giocatore1"> O </string>
+    <string name="giocatore2"> X </string>
+    <string name="titoloDoppio">2 GIOCATORI</string>
+    <string name="titoloSingolo">1 GIOCATORE</string>
+    <string name="reset">RESET </string>
+</resources>
