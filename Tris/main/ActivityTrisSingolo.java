@@ -19,6 +19,7 @@ public class ActivityTrisSingolo extends AppCompatActivity {
     private int [][] m;
     private Button reset;
     public boolean giocatore=true;
+    private int cont=9;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -70,6 +71,8 @@ public class ActivityTrisSingolo extends AppCompatActivity {
 
 
     void inizioGioco(){
+        cont=9;
+
         m= new int[3][3];
         for(int i=0; i<3; i++){
             for(int j=0; j<3; j++){
@@ -145,6 +148,7 @@ public class ActivityTrisSingolo extends AppCompatActivity {
                 computer();
                 giocatore = true;
             }
+            cont--;
 
 
             // stampo matrice
@@ -155,27 +159,30 @@ public class ActivityTrisSingolo extends AppCompatActivity {
             // controllo vittoria
             vittoria=false;
 
-            //VERTICALE
-            if (m[1][y] == m[x][y] && m[0][y] == m[x][y] && m[2][y] == m[x][y]){
-                vittoria=true;   //vittoria verticale
-                Log.d("", "verticale");
-            }else{
-                //ORIZZONTALE
-                if (m[x][0] == m[x][y] && m[x][1] == m[x][y] && m[x][2]== m[x][y]){
-                    vittoria=true;  //vittoria orizzontale
-                    Log.d("", "orizzontale");
+            if(cont<=6){
+                //VERTICALE
+                if (m[1][y] == m[x][y] && m[0][y] == m[x][y] && m[2][y] == m[x][y]){
+                    vittoria=true;   //vittoria verticale
+                    Log.d("", "verticale");
                 }else{
-                    //DIAGONALE PRINCIPALE
-                    if(m[0][0] == m[x][y] && m[1][1] == m[x][y] && m[2][2]== m[x][y]){
-                        vittoria=true;  //diagonale principale
-                        Log.d("", "principale");
-                        //DIAGONALE SECONDARIA
-                    }else if(m[0][2]== m[x][y] && m[1][1]==m[x][y] && m[2][0]== m[x][y]){
-                        vittoria=true;   // diagonale secondaria
-                        Log.d("", "secondaria");
+                    //ORIZZONTALE
+                    if (m[x][0] == m[x][y] && m[x][1] == m[x][y] && m[x][2]== m[x][y]){
+                        vittoria=true;  //vittoria orizzontale
+                        Log.d("", "orizzontale");
+                    }else{
+                        //DIAGONALE PRINCIPALE
+                        if(m[0][0] == m[x][y] && m[1][1] == m[x][y] && m[2][2]== m[x][y]){
+                            vittoria=true;  //diagonale principale
+                            Log.d("", "principale");
+                            //DIAGONALE SECONDARIA
+                        }else if(m[0][2]== m[x][y] && m[1][1]==m[x][y] && m[2][0]== m[x][y]){
+                            vittoria=true;   // diagonale secondaria
+                            Log.d("", "secondaria");
+                        }
                     }
                 }
             }
+
             if(vittoria){
                 if(!giocatore){ // ho già invertito giocatore 1 con computer
                     Log.d(TAG, "VINCE GIOCATORE 1");
@@ -183,6 +190,10 @@ public class ActivityTrisSingolo extends AppCompatActivity {
                 }else{
                     vince("VINCE COMPUTER");
                 }
+                bloccapulsanti();
+            }else if( cont==0){
+                Log.d(TAG, "PAREGGIO");
+                vince("PAREGGIO");
                 bloccapulsanti();
             }
         }

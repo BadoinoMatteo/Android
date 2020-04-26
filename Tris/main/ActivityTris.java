@@ -19,6 +19,7 @@ public class ActivityTris extends AppCompatActivity {
     private int [][] m;
     private Button reset;
     public boolean giocatore=true;
+    private int cont=9;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -96,6 +97,8 @@ public class ActivityTris extends AppCompatActivity {
             }
         }
 
+        cont=9;
+
     }
 
     class myListener implements View.OnClickListener{
@@ -121,6 +124,7 @@ public class ActivityTris extends AppCompatActivity {
                 bL.setText(R.string.giocatore2);
                 bL.setBackgroundResource(R.color.verde);
             }
+            cont--;
             bL.setEnabled(false);
 
             // stampo matrice
@@ -148,14 +152,18 @@ public class ActivityTris extends AppCompatActivity {
                     }
                 }
             }
-            if(vittoria){
-                if(!giocatore){ // ho già invertito giocatore 1 con giocatore 2
+            if(vittoria) {
+                if (!giocatore) { // ho già invertito giocatore 1 con giocatore 2
                     Log.d(TAG, "VINCE GIOCATORE 1");
                     vince("VINCE GIOCATORE 1");
-                }else{
+                } else {
                     Log.d(TAG, "VINCE GIOCATORE 2");
                     vince("VINCE GIOCATORE 2");
                 }
+                bloccapulsanti();
+            }else if( cont==0){
+                Log.d(TAG, "PAREGGIO");
+                vince("PAREGGIO");
                 bloccapulsanti();
             }
         }
