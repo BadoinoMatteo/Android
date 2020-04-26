@@ -36,4 +36,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <Button
+        android:id="@+id/buttonForza4"
+        android:layout_width="402dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="420dp"
+        android:background="#F44336"
+        android:text="@string/forza4"
+        android:textAlignment="center"
+        android:textColor="#3700B3"
+        android:textSize="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

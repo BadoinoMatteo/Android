@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Forza4">
+
+    <TextView
+        android:id="@+id/textViewTris"
+        android:layout_width="394dp"
+        android:layout_height="94dp"
+        android:background="@color/colorPrimary"
+        android:text="@string/forza4"
+        android:textAlignment="center"
+        android:textColor="@color/colorAccent"
+        android:textSize="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.001" />
+
+    <TextView
+        android:id="@+id/lblTit"
+        android:layout_width="match_parent"
+        android:layout_height="51dp"
+        android:text="@string/trattino"
+        android:textAlignment="center"
+        android:textSize="38sp"
+        app:layout_constraintBottom_toTopOf="@+id/tableLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTris"
+        app:layout_constraintVertical_bias="0.138" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="100dp">
+        <TableRow
+            android:id="@+id/tbR0"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:gravity="center">
+        </TableRow>
+        <TableRow
+            android:id="@+id/tbR1"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:gravity="center">
+        </TableRow>
+        <TableRow
+            android:id="@+id/tbR2"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:gravity="center">
+        </TableRow>
+        <TableRow
+            android:id="@+id/tbR3"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:gravity="center">
+        </TableRow>
+        <TableRow
+            android:id="@+id/tbR4"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:gravity="center">
+        </TableRow>
+        <TableRow
+            android:id="@+id/tbR5"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:gravity="center">
+        </TableRow>
+    </TableLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
